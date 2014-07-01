@@ -21,8 +21,16 @@ import android.os.Build;
 //TEST ONLY IMPORT
 import android.util.Log;
 
+/**
+ * @author Mike
+ *
+ */
 public class MainActivity extends ActionBarActivity {
 
+	/**
+	 * Called when the OS fully creates the activity. Tells the OS where to find the layout xml and switches to the main menu fragment.
+	 * @see android.support.v7.app.ActionBarActivity#onCreate(android.os.Bundle)
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -38,14 +46,21 @@ public class MainActivity extends ActionBarActivity {
 
 	}
 
+	/**
+	 * Inflate the menu; this adds items to the action bar if it is present.
+	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
+	/**
+	 * Method for handling action bar item clicks.
+	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
@@ -59,7 +74,15 @@ public class MainActivity extends ActionBarActivity {
 	}
 
 
+	/**
+	 * @author Mike
+	 *
+	 */
 	public static class MainMenuFragment extends Fragment {
+		/**
+		 * Called when the OS is generating the display of the fragment. Sets the layout xml for that fragment and registers event handlers for buttons.
+		 * @see android.support.v4.app.Fragment#onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+		 */
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
@@ -93,7 +116,15 @@ public class MainActivity extends ActionBarActivity {
 		}
 	}
 	
+	/**
+	 * @author Mike
+	 *
+	 */
 	public static class DataEntryFragment extends Fragment {		
+		/**
+		 * Sets layout xml for fragment, registers buttons and text fields.
+		 * @see android.support.v4.app.Fragment#onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+		 */
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_data_entry, container, false);
@@ -161,8 +192,15 @@ public class MainActivity extends ActionBarActivity {
 		}
 	}
 
+	/**
+	 * @author Mike
+	 *
+	 */
 	public static class DataTablesFragment extends Fragment {
 		//TODO - implement data table view
+		/**
+		 * @see android.support.v4.app.Fragment#onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+		 */
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_data_entry, container, false);
@@ -170,8 +208,15 @@ public class MainActivity extends ActionBarActivity {
 		}
 	}
 	
+	/**
+	 * @author Mike
+	 *
+	 */
 	public static class DataGraphsFragment extends Fragment {
 		//TODO - implement data graph view
+		/**
+		 * @see android.support.v4.app.Fragment#onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+		 */
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_data_entry, container, false);
