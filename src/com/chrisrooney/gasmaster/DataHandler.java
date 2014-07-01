@@ -36,7 +36,6 @@ public class DataHandler {
 
 		@Override
 		public void onCreate(SQLiteDatabase db) {
-			// TODO Auto-generated method stub
 			
 			try{
 			db.execSQL(TABLE_CREATE);
@@ -51,7 +50,6 @@ public class DataHandler {
 
 		@Override
 		public void onUpgrade(SQLiteDatabase db, int arg1, int arg2) {
-			// TODO Auto-generated method stub
 			
 			db.execSQL("DROP TABLE IF EXISTS mytable");
 			onCreate(db);
