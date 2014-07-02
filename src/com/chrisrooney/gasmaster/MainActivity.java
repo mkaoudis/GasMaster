@@ -1,3 +1,4 @@
+/**Copyright 2014 by Christopher Rooney, Mike Kaoudis and Manpreet Singh. All rights reserved.*/
 package com.chrisrooney.gasmaster;
 
 import android.support.v7.app.ActionBarActivity;
